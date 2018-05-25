@@ -41,9 +41,9 @@ while (bad_guesses !== 10 && good_guesses.indexOf("_") !== -1) {
   // Prompt Player to guess a letter and store as
   // a variable.
   // put this in a loop until a valid response is received.
- 
+  guessChoices = [];
 
-  var guess = prompt("Number of Guesses Remaining =" +  numGuesses + "\n\n" + "Guesses so Far:" + guessChoices + "\n\n" + good_guesses.join(" ") + "\n\n" + "Player 2: Guess a letter." );
+  var guess = prompt("Number of Guesses Remaining =" +  numGuesses + "\n\n" + "Guesses so Far:" + bad_guesses + "\n\n" + good_guesses.join(" ") + "\n\n" + "Player 2: Guess a letter." );
   
 
   // If the letter does not exist in the word,
@@ -95,12 +95,12 @@ alert("PRESS OK AND THEN PRESS ANY LETTER KEY TO PLAY AGAIN");
 //Finally, show results in HTML 
 
 var html = 
-			"<h1> The Word Guess Game </h1>" +
-			"<p>Guess what word I'm thinking of!</p>" +
+			"<h1> The Coding Word Guess Game  </h1>" +
+			"<h5>Press any key to start the game and begin guessing the computer coding word I'm thinking of!</h5>" +
 			"<p>Wins: " + wins + "</p>" +
 			"<p>Losses: " + losses + "</p>" +
 			"<p>Guesses Left: " + numGuesses + "</p>" +
-			"<p>Your Guesses so far: " + guessChoices.join(",") + "</p>";
+			"<p>Your Guesses so far: " + good_guesses.join(" ") + "</p>";
 
             document.querySelector("#game").innerHTML = html;
 
