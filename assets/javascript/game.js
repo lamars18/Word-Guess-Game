@@ -19,6 +19,8 @@ var guessChoices = [];
 
 document.onkeyup = function(event) {
 
+    var rules = alert("Test Your Knowledge of Computer Coding Terms! Press any key to start the game and begin guessing the computer coding word I'm thinking of!");
+
     var userGuess = event.key;
 
     var secret_word = wordList[Math.floor(Math.random() * wordList.length)];
@@ -43,7 +45,7 @@ while (bad_guesses !== 10 && good_guesses.indexOf("_") !== -1) {
   // put this in a loop until a valid response is received.
   guessChoices = [];
 
-  var guess = prompt("Number of Guesses Remaining =" +  numGuesses + "\n\n" + "Guesses so Far:" + bad_guesses + "\n\n" + good_guesses.join(" ") + "\n\n" + "Player 2: Guess a letter." );
+  var guess = prompt("Number of Guesses Remaining =" +  numGuesses + "\n\n" + "Incorrect Guesses so Far:" + bad_guesses + "\n\n" + good_guesses.join(" ") + "\n\n" + "Player 2: Guess a letter." );
   
 
   // If the letter does not exist in the word,
@@ -99,8 +101,8 @@ var html =
 			"<h5>Press any key to start the game and begin guessing the computer coding word I'm thinking of!</h5>" +
 			"<p>Wins: " + wins + "</p>" +
 			"<p>Losses: " + losses + "</p>" +
-			"<p>Guesses Left: " + numGuesses + "</p>" +
-			"<p>Your Guesses so far: " + good_guesses.join(" ") + "</p>";
+			"<p>Guesses Left: " + numGuesses + "</p>";
+			//"<p>Number of Incorrect Guesses so far: " + bad_guesses + "</p>";
 
             document.querySelector("#game").innerHTML = html;
 
