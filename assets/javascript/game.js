@@ -45,7 +45,7 @@ while (bad_guesses !== 10 && good_guesses.indexOf("_") !== -1) {
   // put this in a loop until a valid response is received.
   guessChoices = [];
 
-  var guess = alert("Number of Guesses Remaining =" +  numGuesses + "\n\n" + "Incorrect Guesses so Far:" + bad_guesses + "\n\n" + good_guesses.join(" ") + "\n\n" + "Player 2: Guess a letter." );
+  var guess = prompt("Number of Guesses Remaining =" +  numGuesses + "\n\n" + "Incorrect Guesses so Far:" + bad_guesses + "\n\n" + good_guesses.join(" ") + "\n\n" + "Player 2: Guess a letter." );
   
 
   // If the letter does not exist in the word,
